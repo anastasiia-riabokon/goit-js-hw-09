@@ -33,8 +33,10 @@ form.addEventListener('input', () => {
 
 form.addEventListener('submit', event => {
   event.preventDefault();
+  const dataEmail = event.target.elements.email.value;
+  const dataMessage = event.target.elements.message.value;
 
-  if (formData.email.trim() === '' || formData.message.trim() === '') {
+  if (dataEmail.trim() === '' || dataMessage.trim() === '') {
     iziToast.error({
       title: 'Error',
       message: 'Fill please all fields',
