@@ -1,0 +1,33 @@
+.sl-wrapper {
+  background: rgba(46, 47, 66, 0.8);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 24px;
+  flex-wrap: wrap;
+
+  max-width: 1440px;
+  padding: 24px 156px;
+}
+
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+
+.gallery-image {
+  transition-property: transform;
+  transition: 250ms ease-in-out;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.04);
+}
+
+.caption-text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
