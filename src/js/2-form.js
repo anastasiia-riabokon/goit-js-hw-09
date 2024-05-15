@@ -50,13 +50,13 @@ form.addEventListener('submit', event => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', refillReload);
+
 function refillReload() {
   const data = getDataFromLocalStorage(LS_KEY) || {};
   form.elements.email.value = data.email || '';
   form.elements.message.value = data.message || '';
 }
-
-refillReload();
 
 function addDataToLocalStorage(key, value) {
   try {
